@@ -18,5 +18,24 @@ public class Main {
         for (int i = numeros.length - 1; i >= 0; i--) {
             System.out.println(numeros[i]);
         }
+
+        /* 2- Menor e Maior Valor -> Escreva um programa que recebe um array de números inteiros do usuário e
+        determina o menor e o maior número dentro desse array. Não utilize funções prontas para essa finalidade. */
+        System.out.println("2- Maior e Menor Valor");
+        int[] arrNumeros = new int[6];
+        int maior = Integer.MIN_VALUE, menor = Integer.MAX_VALUE;
+
+        System.out.println("Informe 6 números:");
+        for (int i = 0; i < arrNumeros.length; i++) {
+            arrNumeros[i] = sc.nextInt();
+            if (arrNumeros[i] > maior) maior = arrNumeros[i];
+            if (arrNumeros[i] < menor) menor = arrNumeros[i];
+        }
+
+        System.out.println("********************");
+        System.out.println("Maior: " + maior);
+        System.out.println("Menor: " + menor);
+
+
     }
 }
