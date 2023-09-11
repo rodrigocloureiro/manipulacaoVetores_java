@@ -21,7 +21,7 @@ public class Main {
 
         /* 2- Menor e Maior Valor -> Escreva um programa que recebe um array de números inteiros do usuário e
         determina o menor e o maior número dentro desse array. Não utilize funções prontas para essa finalidade. */
-        System.out.println("2- Maior e Menor Valor");
+        System.out.println("\n2- Maior e Menor Valor");
         int[] arrNumeros = new int[6];
         int maior = Integer.MIN_VALUE, menor = Integer.MAX_VALUE;
 
@@ -39,7 +39,7 @@ public class Main {
         /* 3- Nome em Posição -> Crie um programa onde o usuário informa 5 nomes. Após inserir todos os nomes,
         o programa deve pedir ao usuário um índice (entre 0 e 4). O programa deve então mostrar o nome que está
         na posição correspondente a esse índice. */
-        System.out.println("3- Nome em Posição");
+        System.out.println("\n3- Nome em Posição");
         String[] nomes = new String[5];
         sc.nextLine();
 
@@ -53,6 +53,26 @@ public class Main {
         System.out.println("********************");
         if (indice >= 0 && indice <= 4) System.out.println(nomes[indice]);
         else System.out.println("Valor inválido!");
+
+        /* 4- Cópia Invertida -> Escreva um programa que receba um array de 5 strings do usuário. Em seguida,
+        copie esse array para outro, mas de forma invertida (o último elemento se torna o primeiro, o penúltimo
+        se torna o segundo, e assim por diante). Mostra o array invertido na tela. */
+        System.out.println("\n4- Cópia Invertida");
+
+        System.out.println("Informe 5 palavras ou nomes:");
+        String[] arrStrings = new String[5];
+        String[] arrInvertido = new String[5];
+        sc.nextLine();
+
+        for (int i = 0; i < arrStrings.length; i++) {
+            arrStrings[i] = sc.nextLine();
+        }
+
+        System.out.println("********************");
+        for (int i = 0; i < arrStrings.length; i++) {
+            arrInvertido[i] = arrStrings[(arrStrings.length - 1) - i];
+            System.out.println(arrInvertido[i]);
+        }
 
 
     }
