@@ -36,6 +36,24 @@ public class Main {
         System.out.println("Maior: " + maior);
         System.out.println("Menor: " + menor);
 
+        /* 3- Nome em Posição -> Crie um programa onde o usuário informa 5 nomes. Após inserir todos os nomes,
+        o programa deve pedir ao usuário um índice (entre 0 e 4). O programa deve então mostrar o nome que está
+        na posição correspondente a esse índice. */
+        System.out.println("3- Nome em Posição");
+        String[] nomes = new String[5];
+        sc.nextLine();
+
+        System.out.println("Informe 5 nomes:");
+        for (int i = 0; i < nomes.length; i++) {
+            nomes[i] = sc.nextLine();
+        }
+
+        System.out.println("Informe um valor entre 0 e 4: ");
+        int indice = sc.nextInt();
+        System.out.println("********************");
+        if (indice >= 0 && indice <= 4) System.out.println(nomes[indice]);
+        else System.out.println("Valor inválido!");
+
 
     }
 }
