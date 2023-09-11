@@ -92,8 +92,24 @@ public class Main {
         }
 
         System.out.println("********************");
-        System.out.printf("Foram digitados %d caracteres", totalCaracteres);
+        System.out.printf("Foram digitados %d caracteres\n", totalCaracteres);
 
-//        System.out.println("\n6- Identificando Números Duplicados");
+        /* 6- Identificando números duplicados -> Escreva um programa que receba 10 números inteiros do usuário
+        e indique se há números duplicados entre eles. */
+        System.out.println("\n6- Identificando Números Duplicados");
+
+        int[] arrNums = new int[10];
+        boolean duplicado = false;
+
+        System.out.println("Informe 10 números inteiros:");
+        for (int i = 0; i < arrNums.length; i++) {
+            arrNums[i] = sc.nextInt();
+
+            for (int j = 0; j < i; j++) {
+                if (arrNums[j] == arrNums[i]) duplicado = true;
+            }
+        }
+
+        System.out.println(duplicado ? "Contém números duplicados!" : "Não contém números duplicados!");
     }
 }
